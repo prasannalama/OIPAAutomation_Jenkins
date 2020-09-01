@@ -1,0 +1,3 @@
+<MaintainBill>
+	<RemoveFromBill BILLGUID="ReplaceThis">BillDetailReferenceGUIDArray1</RemoveFromBill>
+</MaintainBill>

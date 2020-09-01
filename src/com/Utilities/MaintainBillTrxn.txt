@@ -1,0 +1,36 @@
+<Transaction>
+	<EffectiveDate STATUS="Enabled" TYPE="SYSTEM"/>
+	<Fields>
+		<Field>
+			<Name>BillDetailGUID01</Name>
+			<Display>BillDetailGUID01</Display>
+			<DataType>Text</DataType>
+		</Field>
+		<Field>
+			<Name>BillDetailGUID02</Name>
+			<Display>BillDetailGUID02</Display>
+			<DataType>Text</DataType>
+		</Field>
+		<Field>
+			<Name>BillGUID</Name>
+			<Display>BillGUID</Display>
+			<DataType>Text</DataType>
+		</Field>
+	</Fields>
+	<Math>
+		<MathVariables>
+			<MathVariable VARIABLENAME="True" TYPE="VALUE" DATATYPE="INTEGER">1</MathVariable>
+			<MathVariable VARIABLENAME="False" TYPE="VALUE" DATATYPE="INTEGER">0</MathVariable>
+			<MathVariable VARIABLENAME="BillDetailGUID01MV" TYPE="FIELD" DATATYPE="TEXT">Activity:BillDetailGUID01</MathVariable>
+			<MathVariable VARIABLENAME="BillDetailGUID02MV" TYPE="FIELD" DATATYPE="TEXT">Activity:BillDetailGUID02</MathVariable>
+			<MathVariable VARIABLENAME="BillGUIDMV" TYPE="FIELD" DATATYPE="TEXT">Activity:BillGUID</MathVariable>
+			<MathVariable VARIABLENAME="IsMultiDetail" TYPE="IIF" EXPRESSION="IsEmpty(BillDetailGUID02MV)" DATATYPE="INTEGER">False,True</MathVariable>
+			<MathIF IF="IsMultiDetail = True">
+				<MathVariable VARIABLENAME="BillDetailReferenceGUIDArray1" TYPE="STRINGARRAY" DATATYPE="TEXT" OPERATION="FILLBY-SQL">SELECT BillDetailReferenceGUID FROM AsBillDetail WHERE BillDetailGuid IN ([BillDetailGUID01MV],[BillDetailGUID02MV])</MathVariable>
+			</MathIF>
+			<MathIF IF="IsMultiDetail = False">
+				<MathVariable VARIABLENAME="BillDetailReferenceGUIDArray1" TYPE="STRINGARRAY" DATATYPE="TEXT" OPERATION="FILLBY-SQL">SELECT BillDetailReferenceGUID FROM AsBillDetail WHERE BillDetailGuid = [BillDetailGUID01MV]</MathVariable>
+			</MathIF>
+		</MathVariables>
+	</Math>
+</Transaction>

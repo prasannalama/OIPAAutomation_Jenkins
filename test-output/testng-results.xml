@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="237562" started-at="2020-08-25T20:06:54 IST" finished-at="2020-08-25T20:10:51 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="237562" started-at="2020-08-25T20:06:54 IST" finished-at="2020-08-25T20:10:51 IST">
+      <class name="com.JenkinsAutomation.CreatePolicy">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.JenkinsAutomation.CreatePolicy@3cd3e762]" name="login" is-config="true" duration-ms="27132" started-at="2020-08-25T20:06:54 IST" finished-at="2020-08-25T20:07:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="policycreation()[pri:0, instance:com.JenkinsAutomation.CreatePolicy@3cd3e762]" name="policycreation" duration-ms="156798" started-at="2020-08-25T20:07:21 IST" finished-at="2020-08-25T20:09:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- policy creation -->
+        <test-method status="PASS" signature="postTestCase()[pri:0, instance:com.JenkinsAutomation.CreatePolicy@3cd3e762]" name="postTestCase" is-config="true" duration-ms="773" started-at="2020-08-25T20:09:58 IST" finished-at="2020-08-25T20:09:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTestCase -->
+      </class> <!-- com.JenkinsAutomation.CreatePolicy -->
+      <class name="com.JenkinsAutomation.CreateClient">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.JenkinsAutomation.CreateClient@1fa121e2]" name="login" is-config="true" duration-ms="25939" started-at="2020-08-25T20:09:59 IST" finished-at="2020-08-25T20:10:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="clientCreation()[pri:0, instance:com.JenkinsAutomation.CreateClient@1fa121e2]" name="clientCreation" duration-ms="26058" started-at="2020-08-25T20:10:25 IST" finished-at="2020-08-25T20:10:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clientCreation -->
+        <test-method status="PASS" signature="postTestCase()[pri:0, instance:com.JenkinsAutomation.CreateClient@1fa121e2]" name="postTestCase" is-config="true" duration-ms="810" started-at="2020-08-25T20:10:51 IST" finished-at="2020-08-25T20:10:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTestCase -->
+      </class> <!-- com.JenkinsAutomation.CreateClient -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
