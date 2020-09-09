@@ -55,7 +55,7 @@ public class OIPA_Library extends OIPA_PF {
 
 		System.out.println("Launching browser..");
 		Browser = "chrome";
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", " “/usr/bin/chromedriver”");
 		ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
 		options.addArguments("--silent");
